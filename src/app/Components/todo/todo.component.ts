@@ -23,8 +23,18 @@ export class TodoComponent implements OnInit {
     })
   }
   editShow = false
-  seteditShow() {
+  seteditShow(edit) {
+    console.log(edit)
     this.editShow = !this.editShow
+    if(this.editShow){
+      document.getElementById(edit).classList.add('visible')
+      document.getElementById(edit).classList.remove('invisible')
+    }
+    else{
+      document.getElementById(edit).classList.add('invisible')
+      document.getElementById(edit).classList.remove('visible')
+
+    }
   }
   getDate(){
     return new Date();

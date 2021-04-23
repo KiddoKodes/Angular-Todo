@@ -1,10 +1,13 @@
-<div class="container-fluid vh-100 p-0">
-  <div class="container-fluid h-50 bg-danger d-flex align-items-center justify-content-center bg-image flex-column position-relative z-index-2">
+<div class="container-fluid  p-0">
+  <div
+    class="container-fluid h-50 bg-danger d-flex align-items-center justify-content-center bg-image flex-column position-relative z-index-2">
     <h1 class="font-weight-bold text-lg bg-white px-3 py-2 mb-0">Todo</h1>
     <form class="p-4 bg-white m-4 d-flex w-100">
       <div class="input-group">
-        <input type="text" class="form-control  w-75" placeholder="Add Your Todo" aria-label="Add Your Todo" aria-describedby="button-addon2" #todo >
-        <button class="btn btn-outline-danger form-control p-0" type="button" id="button-addon2" type="submit" (click)="create(todo.value,$event)">Add</button>
+        <input type="text" class="form-control  w-75" placeholder="Add Your Todo" aria-label="Add Your Todo"
+          aria-describedby="button-addon2" #todo>
+        <button class="btn btn-outline-danger form-control p-0" type="button" id="button-addon2" type="submit"
+          (click)="create(todo.value,$event)">Add</button>
       </div>
     </form>
   </div>

@@ -3,7 +3,7 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">Todo Name</th>
-            <th scope="col" class="{{editShow?'visible':'invisible'}}">Edit</th>
+            <th scope="col">Edit</th>
             <th scope="col">Actions</th>
 
         </tr>
@@ -14,19 +14,19 @@
             <td>{{todo.todo}}</td>
             <td>
                 <form class="w-100 d-flex">
-                    <div class="input-group {{editShow?'visible':'invisible'}}">
+                    <div class="input-group invisible" id={{i}}>
                         <input type="text" class="form-control  w-25" placeholder="Edit Your Todo"
                             aria-label="Edit Your Todo" aria-describedby="button-addon2" style="max-width: max-content;"
                             #updatedTodo />
-                        <button class="form-control px-2 btn-danger" style="max-width: max-content;" type="submit" (click)="update(todo.id,updatedTodo.value,todo,$event)"
-                            >
+                        <button class="form-control px-2 btn-danger" style="max-width: max-content;" type="submit"
+                            (click)="update(todo.id,updatedTodo.value,todo,$event)">
                             <img src="/assets/images/edit.svg">
                         </button>
                     </div>
                 </form>
             </td>
             <td role="button"><img src="/assets/images/delete.svg" alt="delete" (click)="delete(todo.id)">
-                <img src="/assets/images/edit.svg" style="margin-left: 1rem;" (click)="seteditShow()">
+                <img src="/assets/images/edit.svg" style="margin-left: 1rem;" (click)="seteditShow(i)">
             </td>
         </tr>
     </tbody>
